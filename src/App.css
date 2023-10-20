@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* color */
+
+.bg-primary {
+  background: #0f172a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.bg-secondary {
+  background: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bg-accent {
+  background: darkblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.text-accent {
+  color: #addedc;
 }
 
-.App-link {
-  color: #61dafb;
+nav li a {
+  @apply px-4 py-5 text-lg;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav li a:hover {
+  @apply text-blue-500;
+}
+
+.mobile-nav {
+  @apply block md:hidden fixed top-10 py-2 w-full h-full bg-gray-900 duration-500;
+}
+
+/* HERO */
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+  line-height: 1.5 !important;
+}
+
+/* ABOUT */
+.pAbout {
+  font-family: "Gruppo", sans-serif;
+  font-size: 30px;
+  line-height: 2.5;
+}
+
+.aboutMe {
+  @apply text-4xl font-bold mb-5 border-b-[5px] w-[180px] border-indigo-600 pb-2;
+  font-family: "Gruppo", sans-serif;
+
+}
+
+/* RESUME */
+.resume{
+  background-color: black;
+  color:white;
+  font-family: "Gruppo", sans-serif;
 }
